@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../../Chapter1/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%AE%9E%E8%B7%B5/">
+        <link rel="prev" href="../%E4%BD%95%E4%B8%BA%E6%9C%BA%E5%99%A8%E4%BA%BA/">
       
       
         <link rel="next" href="../%E6%9C%BA%E6%A2%B0%E8%87%82/">
@@ -65,6 +65,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -290,7 +295,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../Reference.md" class="md-tabs__link">
+    <a href="../../Reference/" class="md-tabs__link">
       手册参考 Reference
     </a>
   </li>
@@ -603,6 +608,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BD%95%E4%B8%BA%E6%9C%BA%E5%99%A8%E4%BA%BA/" class="md-nav__link">
+        2.1.0 何为机器人
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -611,10 +630,50 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2.1.1 轮式机器人
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         2.1.1 轮式机器人
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    简介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    轮式机器人的构型
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4322,7 +4381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Reference.md" class="md-nav__link">
+      <a href="../../Reference/" class="md-nav__link">
         手册参考 Reference
       </a>
     </li>
@@ -4374,9 +4433,21 @@
                   
 
 
-  <h1>2.1.1 轮式机器人</h1>
+<h1 id="_1">轮式机器人</h1>
+<h3 id="_2">简介</h3>
+<p>&emsp;&emsp;轮式机器人是最常见也是相对来说简单的一类移动机器人。移动机器人涵盖的范围很广，无论是在平地上奔跑跳跃，在电线杆、垂直墙壁上攀爬，亦或是在管道内穿梭巡检的机器人；还是天上飞的无人机，水里游的机器鱼等，都属于移动机器人的范畴。</p>
+<p>&emsp;&emsp;在这一节，我们先不讨论复杂的特种作业机器人，而是把目光集中在最简单、形如汽车一类的轮式机器人身上。它们有的和汽车非常相似，但轮子的构造和移动方式又有所不同。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img alt="11.1.2" src="../2.1.1.0.png" /></p>
+<p>&emsp;&emsp;现如今，轮式机器人最广泛的应用案例便是在制造业的各个工厂车间内或各大物流仓库里，作为物流运输系统核核心工作单元的<strong>AGV(Automated Guided Vehicle)小车</strong>。在汽车工厂里，AGV可以提供较大的重载物流运输任务，奔忙在工厂的各个产线之间，负责自动运送从上一条产线的工业机械臂上下线的物料零件到下一条工序产线。除了扁平形式的AGV地盘，还有类似<strong>无人叉车</strong>的应用。</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img alt="11.1.2" src="../2.1.1.1.png" /></p>
+<blockquote>
+<p>了解行业应用案例：<a href="https://www.hikrobotics.com/cn/mobilerobot">HIKROBOT海康机器人</a></p>
+</blockquote>
+<p>&emsp;&emsp;除了工厂或物流仓库，在酒店、餐厅里也有用于送餐或引路的服务机器人，其移动依旧依靠轮子，而非近些年发展较为火热的双足人形机器人。</p>
+<p>&emsp;&emsp;在日常生活中，最常见的轮式机器人则是两轮的扫地机器人。扫地机器人紧凑小巧，用两轮差速实现转向，虽然构造简单，但为我们的家居生活带来了不少的便利。与之相似拥有两轮差速构型的是一款知名的基于 <strong><a href="http://wiki.ros.org/">ROS(Robot Operating System)</a></strong> 的移动机器人<a href="https://www.turtlebot.com/turtlebot3/">Turtlebot</a>，用于机器人<strong>SLAM(simultaneous localization and mapping)</strong>定位建图的教育及研究。</p>
+<div align="center"> <img src="https://www.turtlebot.com/assets/images/turtlebot3_with_logo.png" width = 80%/> </div>
 
-
+<h3 id="_3">轮式机器人的构型</h3>
 
 
 
