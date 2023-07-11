@@ -19,7 +19,7 @@
     
     
       
-        <title>2.2 RM比赛机制 - MechaX-机械组入门手册</title>
+        <title>2.2 Robomaster比赛机制 - MechaX-机械组入门手册</title>
       
     
     
@@ -66,6 +66,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#robomaster" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -94,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2.2 RM比赛机制
+              2.2 Robomaster比赛机制
             
           </span>
         </div>
@@ -686,10 +691,98 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2.2 Robomaster比赛机制
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        2.2 RM比赛机制
+        2.2 Robomaster比赛机制
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    基本信息
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    比赛进程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    规则具体机制
+  </a>
+  
+    <nav class="md-nav" aria-label="规则具体机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    扣血机制与回血复活机制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    经济体系机制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    升级机制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    哨站与虚拟护盾机制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    场地增益机制
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4386,9 +4479,46 @@
                   
 
 
-  <h1>2.2 RM比赛机制</h1>
-
-
+<h1 id="robomaster">Robomaster比赛机制</h1>
+<h2 id="_1">基本信息</h2>
+<p>（注：此节讨论RMUC超级对抗赛，RMUL高校联盟赛可视为超级对抗赛的简化版，也作为对抗赛的热身赛，分为步兵1V1和地面射击兵种3V3赛项）</p>
+<blockquote>
+<p><a href="https://www.robomaster.com/zh-CN/">RoboMaster 机甲大师超级对抗赛（RMUC, RoboMaster University Championship）</a>，侧重考察参赛队员对理工学科的综合应用与工程实践能力，充分融合了“机器视觉”、“嵌入式系统设计”、“机械控制”、“惯性导航”、“人机交互”等众多机器人相关技术学科，同时创新性的将电竞呈现方式与机器人竞技相结合，使机器人对抗更加直观激烈，吸引了众多的科技爱好者和社会公众的广泛关注。</p>
+</blockquote>
+<p><img alt="2.2.1" src="../2.2.1.png" /></p>
+<p>在2023赛季中，对战双方需自主研发不同种类和功能的机器人，在指定的比赛场地内进行战术对抗，通过操控机器人发射弹丸攻击敌方机器人和基地。比赛结束时，基地剩余血量高的一方获得比赛胜利。机器人种类如下：</p>
+<ul>
+<li>
+<p><strong>英雄机器人</strong>：发射42mm大弹丸，可对建筑和机器人单位造成大量伤害</p>
+</li>
+<li>
+<p><strong>步兵机器人</strong>：发射17mm小弹丸，可对敌方机器人单位造成可观伤害；同时可以激活能量机关，为队伍带来增益</p>
+</li>
+<li>
+<p><strong>哨兵机器人</strong>：相当于全自动步兵机器人（无操作手），主要任务是对己方建筑进行防守，当然在建图规划控制较优秀的情况下可以成为全场自由人，进可攻退可守</p>
+</li>
+<li>
+<p><strong>工程机器人</strong>：无功率限制，负责取矿为队伍获取经济资源</p>
+</li>
+<li>
+<p><strong>飞镖系统</strong>：发生飞镖，对前哨站造成高额伤害，亦可打击基地</p>
+</li>
+<li>
+<p><strong>雷达</strong>：拥有顶级算力，为全队提供视野和战场信息</p>
+</li>
+</ul>
+<p><img alt="2.2.2" src="../2.2.2.png" /></p>
+<h2 id="_2">比赛进程</h2>
+<h2 id="_3">规则具体机制</h2>
+<p>（截止至第二十一届手册5月V1.3版本）</p>
+<blockquote>
+<p>详细参考：<a href="https://rm-static.djicdn.com/tem/13194/RoboMaster%202022%20%E6%9C%BA%E7%94%B2%E5%A4%A7%E5%B8%88%E8%B6%85%E7%BA%A7%E5%AF%B9%E6%8A%97%E8%B5%9B%E6%AF%94%E8%B5%9B%E8%A7%84%E5%88%99%E6%89%8B%E5%86%8C%20V1.3%20%EF%BC%8820220518%EF%BC%89.pdf">机甲大师超级对抗赛比赛规则手册</a></p>
+</blockquote>
+<h4 id="_4">扣血机制与回血复活机制</h4>
+<h4 id="_5">经济体系机制</h4>
+<h4 id="_6">升级机制</h4>
+<h4 id="_7">哨站与虚拟护盾机制</h4>
+<h4 id="_8">场地增益机制</h4>
 
 
 
