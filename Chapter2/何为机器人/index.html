@@ -4563,7 +4563,7 @@
 <p>&emsp;&emsp;国际化标准组织（ISO）对机器人的定义是：<em>机器人是一种自动的、位置可控的、具有编程能力的多功能机械手，这种机械手具有几个轴，能够借助于可编程序操作来处理各种材料、零件、工具和专用装置，以执行各种任务。</em> 由此看出，一些官方组织对机器人的定义仍然较为落后，停留在工业机械臂的层面。</p>
 <p>&emsp;&emsp;<strong>机器人和普通的机械装置、机电设备有什么区别？不同类型的机器人，如执行较为单一任务的扫地机器人，与拥有多个关节和执行器的复杂人形机器人，其间又有什么共性呢？</strong> 思考这两个问题，我们不难自己对机器人下一个概括性的定义。</p>
 <p>&emsp;&emsp;普通的机械装置，很显然没有集成的动力和自动化控制能力，可以很清楚地看到，各种机构以及传动装置仅仅作为机器人的一部分存在。而在机械结构基础上发展而来的机电一体化设备，比如洗衣机等电器设备以及工厂内进行加工的数控车床，虽然集成了动力驱动以及控制功能，但其功用单一，同时也需要人工操作才能进行正常控制，仍不具备作为一个自动化个体的能力。</p>
-<p>&emsp;&emsp;但是很显然，机器人不仅集成了机电系统，同时其大脑控制器里预先编制的程序可以让机器人作为独立单元自动完成一系列的操作。很多机器人也并非只有单一功能，如最简单的机器人——<strong>机械臂</strong>，都可以通过更换末端执行器进行多功能作业。</p>
+<p>&emsp;&emsp;但是很显然，机器人不仅集成了机电系统，同时其大脑控制器里预先编制的程序可以让机器人作为独立单元自动完成一系列的操作。很多机器人也并非只有单一功能，如最简单的机器人——<strong>机械臂</strong>，都可以通过更换末端执行器进行多功能作业。机械臂与数控机床经常同时出现，而机械臂取代的正是操作工人的位置，进行加工时的上下料操作以及换刀操作。</p>
 <p><center>
     <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/v2-2c9f08f3c33992c00e45be6c7605c8f7_720w.webp"
     width="50%">
@@ -4577,28 +4577,71 @@
 <h2 id="_2">机器人的三要素</h2>
 <ul>
 <li>
-<p><strong>光机电一体化</strong></p>
+<p><strong>1. 光机电一体化</strong></p>
 <blockquote>
 <p>&emsp;&emsp;光机电一体化技术是微电子技术、计算机技术、控制技术、光学技术与机械技术的相互交叉与融合，是诸多高新技术产业和高新技术装备的基础。</p>
 <p>&emsp;&emsp;打印机是典型的光机电一体化产品，材料、电子、光学、机械等领域的新技术都会很快地反映在打印机产品中。</p>
 </blockquote>
 </li>
 <li>
-<p><strong>可编程</strong></p>
-</li>
-<li>
-<p><strong>多功能</strong></p>
+<p><strong>2. 可编程</strong></p>
+<blockquote>
+<p>&emsp;&emsp;PC机/嵌入式处理器内部编好的程序让机器人正确执行任务</p>
+</blockquote>
 </li>
 </ul>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/R.ce64898a2ff8732e48e22cfb2deb04de"
+    width="25%">
+    <br>ARM嵌入式处理器
+</center></p>
+<ul>
+<li><strong>3. 多功能</strong><blockquote>
+<p>诸如Anymal四足机器人可以执行工厂巡检、消防救援等多项任务。</p>
+</blockquote>
+</li>
+</ul>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/anymal.png"
+    width="30%">
+    <br>Anymal机器狗
+</center></p>
 <h2 id="_3">机器人技术</h2>
 <p>&emsp;&emsp;经过几十年的发展 ，机器人技术终于形成了一门综合性学科——<strong>机器人学（Robotics）</strong>。由于机器人学综合了力学、机械学、电子学、生物学、控制论、计算机、人工智能、系统工程等多种学科领域的知识，因此，也有人认为机器人学实际上是一个可分为若干学科的学科门类。</p>
 <p>&emsp;&emsp;一般地说，机器人学的研究目标是以智能计算机为基础的机器人的基本组织和操作，它包括<strong>基础研究</strong>和<strong>应用研究</strong>两方面内容，研究课题包括机械手设计、机器人动力和控制、轨迹设计与规划、传感器、机器人视觉、机器人控制语言、装置与系统结构和机械智能等。</p>
-<p>&emsp;&emsp;从机器人的研发过程来看，它是一项交叉性强、耦合度高的系统工程。</p>
+<p>&emsp;&emsp;从机器人的研发过程来看，它是一项交叉性强、耦合度高的系统工程，涉及的理论、技术分支繁多，比如下面列举的几项。</p>
 <p><center>
     <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/robotresearch.png"
     width="60%">
     <br>机器人研发
 </center></p>
+<ul>
+<li>机器人<strong>基础</strong>理论与方法<blockquote>
+<p>运动学和动力学、作业与运动规划、控制与感知技术、机器人智能理论</p>
+</blockquote>
+</li>
+<li>机器人<strong>设计</strong>理论与技术<blockquote>
+<p><strong>机构分析和综合</strong>、<strong>机构设计与优化</strong>、关键器件设计、仿真技术</p>
+</blockquote>
+</li>
+<li>机器人<strong>仿生</strong>学<blockquote>
+<p>机器人的形态、结构、功能、能量转换、信息传递、控制和管理等特性和功能仿生理论与技术方法</p>
+</blockquote>
+</li>
+<li>机器人<strong>系统</strong>理论与技术<blockquote>
+<p>多机器人系统理论（多机协同）、机器人语言与编程、人机交互、机器人与其他机器系统的协调和交互</p>
+</blockquote>
+</li>
+<li>机器人<strong>操作和移动</strong>理论与技术<blockquote>
+<p>机器人装配技术、移动机器人运动与步态理论、移动机器人稳定性理论、移动操作
+机器人协调与控制论</p>
+</blockquote>
+</li>
+<li>微机器人学<blockquote>
+<p>微机器人的分析、设计、制造和控制等理论与技术方法</p>
+</blockquote>
+</li>
+</ul>
 
 
 
