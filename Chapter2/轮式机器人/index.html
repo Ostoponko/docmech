@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#211" class="md-skip">
           Skip to content
         </a>
       
@@ -394,7 +394,7 @@
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        欢迎
+        欢迎 Welcome
       </a>
     </li>
   
@@ -408,7 +408,7 @@
   
     <li class="md-nav__item">
       <a href="../../Preface/" class="md-nav__link">
-        写在前面
+        前言 Preface
       </a>
     </li>
   
@@ -658,16 +658,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     简介
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     轮式机器人的构型
   </a>
+  
+    <nav class="md-nav" aria-label="轮式机器人的构型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    麦轮构型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    全向轮构型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    舵轮构型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    阿克曼转向构型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    其他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4433,8 +4474,8 @@
                   
 
 
-<h1 id="_1">轮式机器人</h1>
-<h3 id="_2">简介</h3>
+<h1 id="211">2.1.1 轮式机器人</h1>
+<h3 id="_1">简介</h3>
 <p>&emsp;&emsp;轮式机器人是最常见也是相对来说简单的一类移动机器人。移动机器人涵盖的范围很广，无论是在平地上奔跑跳跃，在电线杆、垂直墙壁上攀爬，亦或是在管道内穿梭巡检的机器人；还是天上飞的无人机，水里游的机器鱼等，都属于移动机器人的范畴。</p>
 <p>&emsp;&emsp;在这一节，我们先不讨论复杂的特种作业机器人，而是把目光集中在最简单、形如汽车一类的轮式机器人身上。它们有的和汽车非常相似，但轮子的构造和移动方式又有所不同。</p>
 <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img alt="11.1.2" src="../2.1.1.0.png" /></p>
@@ -4447,7 +4488,15 @@
 <p>&emsp;&emsp;在日常生活中，最常见的轮式机器人则是两轮的扫地机器人。扫地机器人紧凑小巧，用两轮差速实现转向，虽然构造简单，但为我们的家居生活带来了不少的便利。与之相似拥有两轮差速构型的是一款知名的基于 <strong><a href="http://wiki.ros.org/">ROS(Robot Operating System)</a></strong> 的移动机器人<a href="https://www.turtlebot.com/turtlebot3/">Turtlebot</a>，用于机器人<strong>SLAM(simultaneous localization and mapping)</strong>定位建图的教育及研究。</p>
 <div align="center"> <img src="https://www.turtlebot.com/assets/images/turtlebot3_with_logo.png" width = 80%/> </div>
 
-<h3 id="_3">轮式机器人的构型</h3>
+<h3 id="_2">轮式机器人的构型</h3>
+<h4 id="_3">麦轮构型</h4>
+<p>&emsp;&emsp;麦轮全称为麦克纳姆轮</p>
+<h4 id="_4">全向轮构型</h4>
+<p>&emsp;&emsp;全向轮（Omni wheel）与麦轮有所类似，但小辊子的轴向角度与轮子的轴向角度成90°正交，且一般由两个相同的薄轮旋转一个角度安装在一起，组成一个厚轮，保障运行过程中辊子与地面接触的连续性。</p>
+<h4 id="_5">舵轮构型</h4>
+<p>&emsp;&emsp;舵轮构型又称为矢量底盘，因为舵向自由度提供了轮组随时往任意方向平移的可能性。特殊地，舵轮底盘在RM中出现，是为了兼顾相邻轮向正交构型时的小陀螺速度（无麦轮构型功率损失）以及矢量平移构型的灵活性。</p>
+<h4 id="_6">阿克曼转向构型</h4>
+<h4 id="_7">其他</h4>
 
 
 
