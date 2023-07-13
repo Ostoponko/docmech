@@ -12,7 +12,7 @@
         <link rel="prev" href="../../Chapter5/%E5%A4%96%E5%8F%91%E5%8A%A0%E5%B7%A5%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">
       
       
-        <link rel="next" href="../Pyslvs%E4%BB%BF%E7%9C%9F%E8%BE%93%E5%87%BA/">
+        <link rel="next" href="../Pyslvs%E7%A4%BA%E4%BE%8B/">
       
       <link rel="icon" href="../../pic/tools.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
@@ -57,7 +57,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
   
     
     
@@ -1608,9 +1608,54 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          9.1.1 基本操作
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         9.1.1 基本操作
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    简介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    软件界面
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    基本操作
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1623,22 +1668,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Pyslvs%E4%BB%BF%E7%9C%9F%E8%BE%93%E5%87%BA/" class="md-nav__link">
-        9.1.2 仿真输出
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Pyslvs示例.md" class="md-nav__link">
-        9.1.3 软件示例
+      <a href="../Pyslvs%E7%A4%BA%E4%BE%8B/" class="md-nav__link">
+        9.1.2 软件示例
       </a>
     </li>
   
@@ -1658,7 +1689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../watt_linkage.md" class="md-nav__link">
+      <a href="../watt_linkage/" class="md-nav__link">
         9.2 设计实例：瓦特连杆
       </a>
     </li>
@@ -1672,7 +1703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../连杆参数优化.md" class="md-nav__link">
+      <a href="../%E8%BF%9E%E6%9D%86%E5%8F%82%E6%95%B0%E4%BC%98%E5%8C%96/" class="md-nav__link">
         9.3 设计实例：连杆参数优化
       </a>
     </li>
@@ -1686,7 +1717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RM连杆机构.md" class="md-nav__link">
+      <a href="../RM%E8%BF%9E%E6%9D%86%E6%9C%BA%E6%9E%84/" class="md-nav__link">
         9.4 RM设计中的连杆机构
       </a>
     </li>
@@ -4507,7 +4538,62 @@
                   
 
 
-<h1 id="pyslvs">Pyslvs操作逻辑</h1>
+<h1 id="pyslvs">Pyslvs基本操作</h1>
+<h2 id="_1">简介</h2>
+<p>&emsp;&emsp;<strong>Pyslvs</strong>是一个开源的平面联动机构仿真和机械合成系统，它的名字来自“Python”和“Solvers”。简单来说，这是一个简单的<strong>2D连杆机构运动仿真界面</strong>。有很多其他的软件可以实现运动仿真，比如建模软件Solidworks以及多体动力学仿真软件Adams。区别在于，这款软件构建的连杆机构仅仅是简图，而非实体，可以节约时间。界面中设置完Joints和Links后可以通过手动拖动或者设置马达驱动以观察<strong>输出点在平面中形成的曲线</strong>。</p>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/main-win.png"
+    width="60%">
+    <br>PMKS仿真软件界面
+</center></p>
+<blockquote>
+<p>官方文档：https://pyslvs-ui.readthedocs.io/en/latest/</p>
+</blockquote>
+<p>&emsp;&emsp;Pyslvs参考了俄勒冈州州立大学Matthew I. Campbell的项目<a href="https://designengrlab.github.io/PMKS/">PMKS(Planar Mechanism Kinematic Simulator)</a>。</p>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/pmks-example.png"
+    width="40%">
+    <br>PMKS仿真软件界面
+</center></p>
+<h2 id="_2">软件界面</h2>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/pyslvs2.png"
+    width="50%">
+    <br>Mechanism界面
+</center></p>
+<ul>
+<li>
+<p><strong>Mechanism界面</strong>：可设置运动副坐标（JoInts）位置，运动副是否接地（固连至机架）。框选运动副可设置连杆（Links）。这是机构简图绘制的主界面；</p>
+</li>
+<li>
+<p><strong>Inputs界面</strong>：可以设置原动件，观察输出点轨迹，获取输出点位置速度图像；</p>
+</li>
+<li>
+<p><strong>Synthesis界面</strong>：用于机构综合，帮助用户重建机构；</p>
+</li>
+<li>
+<p><strong>Project界面</strong>：用于设置保存路径以及另存为其他格式。</p>
+</li>
+</ul>
+<h2 id="_3">基本操作</h2>
+<blockquote>
+<p>Step1: 建立运动副和连杆。运动副可设置是否grounded(固连机架)。</p>
+</blockquote>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/pyslvs1.png"
+    width="50%">
+    <br>建立运动副，设置连杆
+</center></p>
+<blockquote>
+<p>Step2: 设置机构输入（原动件）可观察原动件和输出的运动轨迹。</p>
+</blockquote>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/pyslvs3.png"
+    width="40%">
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/pyslvs4.png"
+    width="40%">
+    <br>设置原动件，观察输出轨迹以及位置、速度曲线
+</center></p>
 
 
 
