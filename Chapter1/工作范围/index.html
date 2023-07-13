@@ -512,9 +512,101 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          0.2 机械组成员的工作范围
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         0.2 机械组成员的工作范围
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    工作流程
+  </a>
+  
+    <nav class="md-nav" aria-label="工作流程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    具体内容
+  </a>
+  
+    <nav class="md-nav" aria-label="具体内容">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    需求分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    设计：建模与仿真
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    加工制造：自己动手与外发加工
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    装配与电气走线
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    交付测试与迭代
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    后期维护
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4506,12 +4598,46 @@
 
 
 <h1 id="02">0.2 机械组成员的工作范围</h1>
-<p>&emsp;&emsp;作为RM传统几大组机械、硬件、电控、视觉中总是工作最辛苦、背锅最多的一组，机械组身上所肩负的责任非常艰巨。可以说，一个优秀的机械组决定了队伍较高的下限。</p>
-<p>&emsp;&emsp;机器人的结构设计决定了路过障碍路段以及飞坡过程的平稳性、发射弹道的精准性以及云台两轴的高响应速度，从而为机器人的控制提供了便捷（否则需要强大的电控去用控制弥补结构上的缺陷）。在一个高强度、长战线的竞技对抗赛事中，机器人在赛场复杂工况下的稳定性是巨大的考验，这也是对机械组工作质量的重要检验。在RM中，机器的稳定性、一致性是决定胜利的首要指标。</p>
+<h2 id="_1">工作流程</h2>
+<p>&emsp;&emsp;作为RM传统几大组机械、硬件、电控、视觉中总是工作最辛苦、<mark class="critic">背锅最多</mark>的一组，机械组身上所肩负的责任非常艰巨。可以说，一个优秀的机械组决定了队伍较高的下限。</p>
+<p>&emsp;&emsp;机器人的结构设计决定了路过障碍路段以及飞坡过程的平稳性、发射弹道的精准性以及云台两轴的高响应速度，从而为机器人的控制提供了便捷（否则需要强大的电控去用控制弥补结构上的缺陷）。在一个高强度、长战线的竞技对抗赛事中，机器人在赛场复杂工况下的稳定性是巨大的考验，这也是对机械组工作质量的重要检验。在RM中，机器的<strong>稳定性、一致性</strong>是决定胜利的首要指标。</p>
 <p>&emsp;&emsp;从工作流程上来说，机械组成员的任务就是以下几步：</p>
 <blockquote>
-<p>分析 - 设计 - 制造 - 组装 - 测试 - 迭代 - 维护 - 修理</p>
+<p>分析 - 设计 - 制造 - 组装 - 测试 - 迭代 - 维护</p>
 </blockquote>
+<p>&emsp;&emsp;更详细地，可以参考下面的工作流程框架。</p>
+<pre class="mermaid"><code>stateDiagram
+    direction LR
+    [*] --&gt; 分析需求
+    分析需求 --&gt; 自顶向下设计
+    state 分析需求 {
+      direction TB
+      分析规则变化新需求 --&gt; 分析待改善现状
+    }
+    自顶向下设计 --&gt; 加工制造
+    state 自顶向下设计 {
+      direction TB
+      整机方案布局 --&gt; 模块设计
+      模块设计 --&gt; 模块间适配
+    }
+
+    state 加工制造 {
+      direction TB
+      加工 --&gt; 内部
+      加工 --&gt; 外发
+      内部 --&gt; 标准件购置
+      外发 --&gt; 标准件购置
+    }
+    加工制造 --&gt; 装配
+    装配 --&gt; 交付测试
+    交付测试 --&gt; 维护
+    交付测试 --&gt; 模块迭代
+    模块迭代 --&gt; 分析需求
+    交付测试 --&gt; 部分返工
+    部分返工 --&gt; 加工制造
+    维护 --&gt; [*]
+</code></pre>
+<h3 id="_2">具体内容</h3>
 <p><center>
     <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/O3T7QZ34%5BVT1%5BC%40VWPJFBXY.png"
     width="25%">
@@ -4524,6 +4650,13 @@
 <blockquote>
 <p>图片来源：Boston Dynamics视频 <a href="https://www.bilibili.com/video/BV1AN4y1j7yQ/">Ask A Roboticist: Meet Josh</a></p>
 </blockquote>
+<h4 id="_3">需求分析</h4>
+<h4 id="_4">设计：建模与仿真</h4>
+<p>我们会用到CAD建模软件来具象化我们的设计思路，</p>
+<h4 id="_5">加工制造：自己动手与外发加工</h4>
+<h4 id="_6">装配与电气走线</h4>
+<h4 id="_7">交付测试与迭代</h4>
+<h4 id="_8">后期维护</h4>
 
 
 
