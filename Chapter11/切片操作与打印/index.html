@@ -4732,42 +4732,90 @@
 <ol>
 <li>
 <p>另存为，选择导出STL格式的零件：</p>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/ISKIVSYPAT(116%7D%7BB8%24R%7BW0.png"
+width="60%">
+</center></p>
 </li>
 <li>
 <p>适当调整选项中的误差和角度（减少角度可以减少圆因近似为多边形产生的尺寸误差）。 STL模型会将各种曲面近似为三角面的组合，导出精度越高，切片时轨迹越接近模型本身的曲线，但存在的问题是G-code机器代码量的增大，从而G-code文件大小也会增大。</p>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/0UA%40G%5D%5D%24SOO)58UBDQUJMZA.png"
+width="50%">
+</center></p>
 </li>
 <li>
 <p>导出完成后会出现提示界面，此时会显示切片后三角面的数目。有时会弹出选择界面，选择全部实体即可。获得了STL文件之后，下一步便是切片操作。</p>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/PKT%7B7B%7B3%7EZ%5DZ%24%408H%24T5PO_S.png"
+width="50%">
+</center></p>
 </li>
 </ol>
 <h3 id="_1">打印前的一些基本设置</h3>
 <ol>
 <li>
 <p>另存为导出STL格式的零件，用Superslicer打开。用放置在平面功能选择和平台接触的零件平面。之后可以设置打印数量，调整位置和零件之间的间距。</p>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/LNSYA%7D1%7E7GMQ0LC1%5B(WIMAP.png"
+width="30%">
+</center></p>
 </li>
 <li>
 <p>层高设置以及轮廓层数设置。层高一般设置为0.2即可（除非想打精细一点的装饰零件，可调至0.05，不过打印时间会大大延长）。壁厚参数会影响零件的强度。对于结构件，一般可以设置4至5层壁厚；对于要求不高的装饰件可以减少壁厚（垂直外壳轮廓）。</p>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/%24%40%7D%7BY%24%25E9NTBSO%259I9ZFA%5DW.png"
+width="50%">
+</center></p>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/P7A%246QLHGT%40GZP3GZUD7%605K.png"
+width="50%">
+</center></p>
 </li>
 <li>
 <p>支撑模式可以根据需求选择。在这里我选择了比较简单的直线支撑模式。</p>
 </li>
 </ol>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/%5DBEVGK52%24%4010%40N%5DHP9IMV_4.png"
+width="50%">
+</center></p>
 <h3 id="_2">切片打印</h3>
 <ol>
 <li>
 <p>切片之前需要确认材料是否正确。设置支撑的生成位置。另外填充率是一个重要参数，会影响零件的强度以及打印时长。但是超过一定的填充率时，对零件强度影响变得微小，反而起到了增重和延长打印时间的负面作用。一般对于要求较高的零件，设置填充率在40-50左右即可。</p>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/%2446ZW_%24O%5B1A(1Y%7EQVJQWPNW.png"
+width="40%">
+</center></p>
 </li>
 <li>
 <p>勾选上图中侧裙选项会使得零件地面外围延伸出几圈裙边，可以有效防止零件翘边或者底面较小、高径比较大的零件再打印过程中脱离打印平面。一般在打印平台上涂固体胶也能起到类似的效果。点击切片，系统会自动生成喷头移动的路径以及G-code代码。</p>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/DH8D(HK%5BM%5DL7D%60WJ(8%7DP9%5D2.png"
+width="40%">
+</center></p>
 </li>
 <li>
 <p>之后可以在左上角看到各个线条的功能类型区分，有悬空层、搭桥层、各种类型的填充以及支撑材料。在右侧竖直层数栏进行拖动，可以看到每一层的线条类型组成。</p>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/G1VNQH4YZG0NLI0%5BD%25%24%7D%40%7DL.png"
+width="60%">
+</center></p>
 </li>
 <li>
 <p>在下方滑动条进行拖动可以看到每一层的运行轨迹以及左侧显示的对应G-code代码。</p>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/L6IK)OTRK4%405EQL0%40%5BRY%40DO.png"
+width="50%">
+</center></p>
 </li>
 <li>
 <p>点击导出G-code文件，传至打印机即可被打印机识别并开启打印任务。</p>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/%7BP%7BC3J9%7E%7EHB20ADL2N0F8%7E9.png"
+width="30%">
+</center></p>
 </li>
 </ol>
 <h3 id="_3">其他参数设置</h3>
