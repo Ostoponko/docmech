@@ -4677,45 +4677,39 @@
 
 <h1 id="_1">在线文档无法加载图片？</h1>
 <ol>
-<li>进入<a href="https://www.ipaddress.com/">ipaddress</a>网站，查询 raw.githubusercontent.com 的IP地址。所列举的四个IPv4地址随便选取一个，比如下面列表的第一个。</li>
-</ol>
-<blockquote>
-<ul>
-<li>185.199.108.133</li>
-<li>185.199.109.133</li>
-<li>185.199.110.133</li>
-<li>185.199.111.133</li>
-</ul>
-</blockquote>
-<ol>
-<li>系统搜索 Windows PowerShell，输入 notepad 后回车打开记事本，点击打开，按照以下路径打开hosts文件：<blockquote>
-<p>C:\windows\System32\drivers\etc\hosts</p>
-</blockquote>
+<li>
+<p>进入<a href="https://www.ipaddress.com/">ipaddress</a>网站，查询 raw.githubusercontent.com 的IP地址。所列举的四个IPv4地址随便选取一个，比如下面列表的第一个。
+    <div class="copy highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">185.199.108.133</span>
+<span class="l l-Scalar l-Scalar-Plain">185.199.109.133</span>
+<span class="l l-Scalar l-Scalar-Plain">185.199.110.133</span>
+<span class="l l-Scalar l-Scalar-Plain">185.199.111.133</span>
+</code></pre></div></p>
 </li>
-</ol>
+<li>
+<p>系统搜索 Windows PowerShell，输入 notepad 后 <span class="keys"><kbd class="key-enter">Enter</kbd></span> 打开记事本，点击打开，按照以下路径打开hosts文件：</p>
+<div class="copy highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">C:\windows\System32\drivers\etc\hosts</span>
+</code></pre></div>
 <p><center>
 <img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/JW%40%25W2(Y%5B1465%40IJY%24QQGG9.png"
 width="50%">
 <br>hosts文件路径
 </center></p>
-<ol>
-<li>
-<p>在最下面一行添加（无需 #）：</p>
-<blockquote>
-<p>185.199.108.133 raw.githubusercontent.com</p>
-</blockquote>
 </li>
 <li>
-<p>保存后 win+R 后输入 cmd，打开Command窗口，输入以下指令：</p>
-<blockquote>
-<p>ipconfig/flushdns</p>
-</blockquote>
+<p>在最下面一行添加（无需 #）：
+    <div class="copy highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">185.199.108.133 raw.githubusercontent.com</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>保存后 <span class="keys"><kbd class="key-windows">Win</kbd><span>+</span><kbd class="key-r">R</kbd></span> 后输入 cmd，打开Command窗口，输入以下指令后 <span class="keys"><kbd class="key-enter">Enter</kbd></span> ：
+    <div class="copy highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">ipconfig/flushdns</span>
+</code></pre></div></p>
 </li>
 <li>
 <p>刷新完DNS解析之后，再次打开文档观察图片是否正常显示。</p>
 </li>
 <li>
-<p>如果本身访问github受限，可以科学上网试试。</p>
+<p>如果本身访问github受限，可以试试科学上网。</p>
 </li>
 <li>
 <p>可以使用同学的电脑访问文档，或者阅读PDF版本。</p>
@@ -4812,7 +4806,7 @@ width="50%">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tracking", "navigation.sections", "navigation.tabs", "toc.integrate", "navigation.footer"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tracking", "navigation.sections", "navigation.tabs", "navigation.path", "toc.integrate", "navigation.footer"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
