@@ -420,6 +420,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../version/" class="md-nav__link">
+        版本说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contents/" class="md-nav__link">
+        参考目录
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
       
     
@@ -428,17 +456,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
       
       
       
-        <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
           使用时的问题
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_1_3">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_5">
           <span class="md-nav__icon md-icon"></span>
           使用时的问题
         </label>
@@ -828,7 +856,7 @@
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    其他
+    两轮平衡型
   </a>
   
 </li>
@@ -4756,8 +4784,8 @@
                   
 
 
-<h1 id="121">1.2.1 轮式机器人</h1>
-<h3 id="_1">简介</h3>
+<h1 id="121"><strong>1.2.1 轮式机器人</strong></h1>
+<h2 id="_1">简介</h2>
 <p>&emsp;&emsp;轮式机器人是最常见也是相对来说简单的一类移动机器人。移动机器人涵盖的范围很广，无论是在平地上奔跑跳跃，在电线杆、垂直墙壁上攀爬，亦或是在管道内穿梭巡检的机器人；还是天上飞的无人机，水里游的机器鱼等，都属于移动机器人的范畴。</p>
 <p>&emsp;&emsp;在这一节，我们先不讨论复杂的特种作业机器人，而是把目光集中在最简单、形如汽车一类的轮式机器人身上。它们有的和汽车非常相似，但轮子的构造和移动方式又有所不同。</p>
 <p><center>
@@ -4768,25 +4796,92 @@
 <p>&emsp;&emsp;现如今，轮式机器人最广泛的应用案例便是在制造业的各个工厂车间内或各大物流仓库里，作为物流运输系统核核心工作单元的<strong>AGV(Automated Guided Vehicle)小车</strong>。在汽车工厂里，AGV可以提供较大的重载物流运输任务，奔忙在工厂的各个产线之间，负责自动运送从上一条产线的工业机械臂上下线的物料零件到下一条工序产线。除了扁平形式的AGV地盘，还有类似<strong>无人叉车</strong>的应用。</p>
 <p><center>
     <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/2.1.1.1.png"
-    width= 40%">
+    width= 30%">
     <br>工业生产线上的海康重载AGV
 </center></p>
 <blockquote>
 <p>了解行业应用案例：<a href="https://www.hikrobotics.com/cn/mobilerobot">HIKROBOT海康机器人</a></p>
 </blockquote>
 <p>&emsp;&emsp;除了工厂或物流仓库，在酒店、餐厅里也有用于送餐或引路的服务机器人，其移动依旧依靠轮子，而非近些年发展较为火热的双足人形机器人。</p>
-<p>&emsp;&emsp;在日常生活中，最常见的轮式机器人则是两轮的扫地机器人。扫地机器人紧凑小巧，用两轮差速实现转向，虽然构造简单，但为我们的家居生活带来了不少的便利。与之相似拥有两轮差速构型的是一款知名的基于 <strong><a href="http://wiki.ros.org/">ROS(Robot Operating System)</a></strong> 的移动机器人<a href="https://www.turtlebot.com/turtlebot3/">Turtlebot</a>，用于机器人<strong>SLAM(simultaneous localization and mapping)</strong>定位建图的教育及研究。</p>
-<div align="center"> <img src="https://www.turtlebot.com/assets/images/turtlebot3_with_logo.png" width = 50%/> </div>
+<p>&emsp;&emsp;在日常生活中，最常见的轮式机器人则是两轮的扫地机器人。扫地机器人紧凑小巧，用两轮差速实现转向，虽然构造简单，但为我们的家居生活带来了不少的便利。与之相似拥有两轮差速构型的是一款知名的基于 <strong><a href="http://wiki.ros.org/">ROS(Robot Operating System)</a></strong> 的移动机器人<a href="https://www.turtlebot.com/turtlebot3/">Turtlebot</a>，用于机器人<strong>SLAM(simultaneous localization and mapping)</strong>定位建图的教育及研究。这类轮式机器人通常拥有其他的<strong>被动轮</strong>（如普通万向轮）提供与地面的第三个（及以上）支撑点，从而不需要像平衡车一样额外实现自身的平衡稳定。</p>
+<div align="center"> <img src="https://www.turtlebot.com/assets/images/turtlebot3_with_logo.png" width = 40%/> </div>
 
-<h3 id="_2">轮式机器人的构型</h3>
-<h4 id="_3">麦轮构型</h4>
-<p>&emsp;&emsp;麦轮全称为麦克纳姆轮</p>
-<h4 id="_4">全向轮构型</h4>
-<p>&emsp;&emsp;全向轮（Omni wheel）与麦轮有所类似，但小辊子的轴向角度与轮子的轴向角度成90°正交，且一般由两个相同的薄轮旋转一个角度安装在一起，组成一个厚轮，保障运行过程中辊子与地面接触的连续性。</p>
-<h4 id="_5">舵轮构型</h4>
-<p>&emsp;&emsp;舵轮构型又称为矢量底盘，因为舵向自由度提供了轮组随时往任意方向平移的可能性。特殊地，舵轮底盘在RM中出现，是为了兼顾相邻轮向正交构型时的小陀螺速度（无麦轮构型功率损失）以及矢量平移构型的灵活性。</p>
-<h4 id="_6">阿克曼转向构型</h4>
-<h4 id="_7">其他</h4>
+<h2 id="_2">轮式机器人的构型</h2>
+<h3 id="_3">麦轮构型</h3>
+<p>&emsp;&emsp;麦轮全称为麦克纳姆轮，在Robomaster早期几乎是清一色的麦轮机器人。至今，麦轮构型仍为RM中的主流底盘选择。</p>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/R.62bcd09e7e212575b362fc1501080c00"
+    width= 41%">
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/%25EM0%5DL%24%7E%60J%2445EGAOB0TE)S.png"
+    width= 30%">
+    <br>麦克纳姆轮 以及 招新棚中的麦轮步兵</p>
+<p></center></p>
+<p>&emsp;&emsp;麦克纳姆轮与普通橡胶轮的不同在于外圈的小胶轮。小胶轮在接触地面时，由于与轴线成45°角，会将地面的摩擦力分解成沿小胶轮轴线方向的Fy和垂直于轴线方向的F<sub>x</sub>，其中垂直于轴线的分力F<sub>x</sub>会使得小胶轮旋转，而使得其分力对整体运动不造成影响，F<sub>y</sub>会对底盘整体运动造成影响。</p>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/REJ1C%40%40W4B5Q1SU%24%608I%7EIO7.png"
+    width= 30%">
+    <br>麦轮触地摩擦力分解（F<sub>y</sub>的贡献）
+</center></p>
+<p>&emsp;&emsp;四麦克纳姆轮有O型排布与X型排布两种。X型不利于旋转，因此在RM中我们采取<strong>O型排布</strong>。底盘前进速度为x m/s时，四个底盘电机速度均为x m/s。如图所示，前两轮左右方向的受力相互抵消，只留下前后方向的受力；后两轮同样左右方向的受力相互抵消，只留下前后方向的受力。同理，底盘在横向平移时我们也可解算出四个轮子对应的速度。</p>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/%7ECHO_2%7B(W7%7EP1Q0%5B86%5B1C%7BI.png"
+    width= 30%">
+    <br>O型四麦轮底盘前进速度解算
+</center></p>
+<h3 id="_4">全向轮构型</h3>
+<p>&emsp;&emsp;全向轮（Omni wheel）与麦轮有所类似，但小辊子的轴向角度与轮子的轴向角度成90°正交，且一般由两个相同的薄轮旋转一个角度安装在一起，组成一个厚轮，保障运行过程中辊子与地面接触的连续性。全向轮步兵在RM中也比较常见。通常来说，有三轮全向轮和四轮全向轮两种构型。</p>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/083fe21a6f279c1557449b5b98e86144_r.jpg"
+    width= 25%">
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/v2-69132b9098e976b1797e215dce3880a9_r.jpg"
+    width= 28%">
+    <br>全向轮与三全向轮底盘
+</center></p>
+<p>&emsp;&emsp;相比麦轮，全向轮步兵的优点也很明显，就是在小陀螺旋转的时候没有构型解算带来的功率损失，能够在不超功率的情况下实现高速小陀螺。但是，在横向移动的时候全向轮底盘也会产生功率损失。</p>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/2BA054A19CF44270410F8BF6363764BB.jpg"
+    width= 30%">
+    <br>全向轮步兵与麦轮步兵
+</center></p>
+<h3 id="_5">舵轮构型</h3>
+<p>&emsp;&emsp;舵轮构型又称为矢量底盘，因为舵向自由度提供了轮组随时往任意方向平移的可能性。虽然轮子没有特殊之处，但是在轮子的驱动上增加了一个转向功能。特殊地，舵轮底盘在RM中出现，是为了兼顾相邻轮向正交构型时的小陀螺速度（无麦轮构型功率损失）以及矢量平移构型的灵活性。四舵轮步兵主要的缺点就是在已有轮向驱动的前提下增加了四个舵向电机，增加了重量和成本（主要是成本）。但是在此基础上换来的性能收益也是比较可观的。</p>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/XFPJN%7DQ%7EUA%5DCBDNG%24X%25NJ%5BL.png"
+    width= 30%">
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/_8XGFR%40AK%40%24G%5BHCQ%5DTV7R%40W.png"
+    width= 50%">
+    <br>斯基的舵轮步兵以及轮组细节
+</center></p>
+<p>&emsp;&emsp;在FTC/FRC比赛中经常出现两个舵轮的矢量底盘，由其他四个被动的全向轮提供与地面的完整接触。RM中的舵轮通常是两个独立驱动自由度（舵向和轮向独立控制），轮向电机嵌入轮毂直驱，控制上更简单；而FTC/FRC比赛中经常出现差动型的舵轮（舵向和轮向需要解耦）——因此为了控制的精确度，常常在舵向上加磁编码器以获得准确的舵向角度。两个独立驱动自由度带来的缺点是轮向电机走线通常需要经过滑环，以避免转动时对电线的破坏，而这也是耦合型舵轮能够避免的问题（驱动电机已经移至底盘上方，轮向电机不跟随舵向旋转）。</p>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/%7D2%5D9%242K%406I%7E%25WXWJX%60%7EJ%40QN.png"
+    width= 32%">
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/%25Q9(DMHAN1C2%7ES9%7D7%7E%24QSGW.png"
+    width= 44%">
+    <br>FRC中的舵轮轮组（Swerve）
+</center></p>
+<blockquote>
+<p>参考视频</p>
+<ol>
+<li><a href="https://www.bilibili.com/video/BV1Wf4y1J7bM/">来点爵士！用星际牛仔的方式打开RM最速舵轮</a></li>
+<li><a href="https://www.bilibili.com/video/BV1oJ411N7Ct/">【FTC】如何在FTC中做出矢量底盘</a></li>
+<li><a href="https://www.bilibili.com/video/BV1gB4y1w7PK/">【FRC】国外神队Team 148 最新矢量底盘展示</a></li>
+</ol>
+</blockquote>
+<h3 id="_6">阿克曼转向构型</h3>
+<p>&emsp;&emsp;我们常见的汽车就是阿克曼转向构型调整优化而来的。阿克曼转向几何由德国车辆工程师Lankensperger于1817年提出，具体原理是，利用四连杆的相等曲柄使内侧轮的转向角比外侧轮大大约2~4度，使四个轮子路径的圆心大致交会于后轴的延长线上瞬时转向中心，让车辆可以顺畅的转弯。</p>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/43%256)WP%25Q%5BHJ%60HJ0HYW%5BP%252.png"
+    width= 30%">
+    <br>阿克曼转向底盘
+</center></p>
+<h3 id="_7">两轮平衡型</h3>
+<p>&emsp;&emsp;简单来说就是平衡车的构型。由于与地面只有两个接触点，所以在控制时需要利用机身姿态角度做反馈控制，保证机身的平衡稳定。如果感兴趣，同学们可以参考开源项目，尝试自己做一个平衡小车，需要用到硬件电路、STM32、以及PID控制的相关知识。</p>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/8%7B%60PL7K7%7EM)E_X%7DPGW2Y2%5BS.png"
+    width= 30%">
+    <br>两轮平衡小车
+</center></p>
 
 
 
@@ -4863,7 +4958,7 @@
     
     
     
-    <a href="https://mechax.readthedocs.io/zh_CN/latest/" target="_blank" rel="noopener" title="千里战队 文档" class="md-social__link">
+    <a href="https://mechax.readthedocs.io/zh_CN/latest/" target="_blank" rel="noopener" title="千里战队-文档" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
