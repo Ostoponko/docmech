@@ -1484,9 +1484,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          5.2.1 示例1：悬臂板的绘制（草图定义及拉伸实体）
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         5.2.1 示例1：悬臂板的绘制（草图定义及拉伸实体）
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    零件概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    绘制过程
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4647,7 +4685,7 @@
 
 
 <h1 id="521-1">5.2.1 示例1：悬臂板的绘制</h1>
-<h1 id="_1">零件概要</h1>
+<h2 id="_1">零件概要</h2>
 <p>&emsp;&emsp;这是22赛季5号步兵身上的一个零件，来源于轮组悬挂模块，材质是一块碳纤维板，加工方法是CNC雕刻。在这个案例中，你将学习到：</p>
 <blockquote>
 <ol>
@@ -4670,7 +4708,24 @@
     width=40%>
 </center></p>
 <p>&emsp;&emsp;相信大家在专题1中已经学习到了悬挂的功用。在这块板子上，除了用于与电机安装件相连接的孔位、通过电机的中空、用于固定摇臂中心的孔位以及用固定避震器一端的孔位，还有许多形状不规则的镂空减重设计。这是为了在确保强度损失代价不大的情况下尽可能减轻轮组簧下质量，以提高悬挂系统的被动响应速度。</p>
-<h1 id="_2">绘制过程</h1>
+<p>&emsp;&emsp;如何进行合理的减重设计？用计算机辅助工程（CAE）软件如Ansys Workbench中导入模型，设置边界条件以及优化目标参数，可以进行拓扑优化设计。Solidworks也有内置的仿真优化设计功能。如果用Fusion进行建模，也有相似的衍生式设计功能进行云端计算，输出优化结果。</p>
+<p>&emsp;&emsp;但对于较为简单的二维情况，我们用简单的受力分析也可以大概进行判断，结构受飞坡落地或平地撞击时的冲击载荷时，哪一部分材料对强度影响较大，哪一部分材料对承受冲击贡献较小。当轮子收到冲击传递悬臂板上时，重力相比冲击载荷可以忽略不计，此时板件受到了三个支反力的作用，由三力汇交原则，我们需要使得力作用的方向上
+有材料承受这个力。而在其他的部位，对承担载荷的贡献就较少了。</p>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/3%5B4YJ_P)FC%7D%7E_%60JPZ8IISXS.png"
+    width=30%>
+</center></p>
+<p>&emsp;&emsp;在确定完部位后，就可以根据形状以及外观进行镂空了。虽然这种方法不能取得最优的结果，但是对减重来说已经足够划算，且大概率不会翻车（因为薄的板件更害怕弯矩，而非沿着板平面的力）。</p>
+<blockquote>
+<p>推荐阅读（强烈推荐）：
+1. <strong><a href="https://bbs.robomaster.com/forum.php?mod=viewthread&amp;tid=12345">《结构设计的思维逻辑》</a></strong>，哈工大，金子旭（摸鱼斯基）
+2. <strong><a href="https://bbs.robomaster.com/forum.php?mod=viewthread&amp;tid=21769">轻量化设计指南</a></strong>，哈工大，金子旭（摸鱼斯基）</p>
+</blockquote>
+<h2 id="_2">绘制过程</h2>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/%7D7%5B%7D%25BBHGLP)D%7DQG6M)NU)3.png"
+    width=40%>
+</center></p>
 <p><center>
     <img src = ""
     width=30%>
