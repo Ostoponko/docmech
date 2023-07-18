@@ -4690,7 +4690,7 @@
 <blockquote>
 <ol>
 <li>
-<p>绘制草图（直线、圆弧工具；镜像操作；转化构造线）</p>
+<p>绘制草图（直线、圆弧工具；圆周阵列；镜像操作；转化构造线）</p>
 </li>
 <li>
 <p>特征操作（拉伸凸台/基体；圆角）</p>
@@ -4705,7 +4705,9 @@
 </blockquote>
 <p><center>
     <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/W%5D%25JNV14MX_VC4%5BYMQ%5B78VY.png"
-    width=40%>
+    width=50%>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/%7D7%5B%7D%25BBHGLP)D%7DQG6M)NU)3.png"
+    width=35%>
 </center></p>
 <p>&emsp;&emsp;相信大家在专题1中已经学习到了悬挂的功用。在这块板子上，除了用于与电机安装件相连接的孔位、通过电机的中空、用于固定摇臂中心的孔位以及用固定避震器一端的孔位，还有许多形状不规则的镂空减重设计。这是为了在确保强度损失代价不大的情况下尽可能减轻轮组簧下质量，以提高悬挂系统的被动响应速度。</p>
 <p>&emsp;&emsp;如何进行合理的减重设计？用计算机辅助工程（CAE）软件如Ansys Workbench中导入模型，设置边界条件以及优化目标参数，可以进行拓扑优化设计。Solidworks也有内置的仿真优化设计功能。如果用Fusion进行建模，也有相似的衍生式设计功能进行云端计算，输出优化结果。</p>
@@ -4717,34 +4719,74 @@
 </center></p>
 <p>&emsp;&emsp;在确定完部位后，就可以根据形状以及外观进行镂空了。虽然这种方法不能取得最优的结果，但是对减重来说已经足够划算，且大概率不会翻车（因为薄的板件更害怕弯矩，而非沿着板平面的力）。</p>
 <blockquote>
-<p>推荐阅读（强烈推荐）：
-1. <strong><a href="https://bbs.robomaster.com/forum.php?mod=viewthread&amp;tid=12345">《结构设计的思维逻辑》</a></strong>，哈工大，金子旭（摸鱼斯基）
-2. <strong><a href="https://bbs.robomaster.com/forum.php?mod=viewthread&amp;tid=21769">轻量化设计指南</a></strong>，哈工大，金子旭（摸鱼斯基）</p>
+<p>推荐阅读（强烈推荐）：</p>
+<ol>
+<li>
+<p><strong><a href="https://bbs.robomaster.com/forum.php?mod=viewthread&amp;tid=12345">《结构设计的思维逻辑》</a></strong>，哈工大，金子旭（摸鱼斯基）</p>
+</li>
+<li>
+<p><strong><a href="https://bbs.robomaster.com/forum.php?mod=viewthread&amp;tid=21769">《轻量化设计指南》</a></strong>，哈工大，金子旭（摸鱼斯基）</p>
+</li>
+</ol>
 </blockquote>
 <h2 id="_2">绘制过程</h2>
+<ol>
+<li>
+<p>绘制悬臂板的基本形状用于拉伸操作(设计时在单独的草图中画了底盘侧视尺寸，用于调整位置、角度以及防止干涉)。</p>
 <p><center>
-    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/%7D7%5B%7D%25BBHGLP)D%7DQG6M)NU)3.png"
-    width=40%>
+<img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/1%5BA1%7EI(%5DYSR30J4%5DLR9%25Z2T.png"
+width=65%><br>悬臂板基本尺寸（临摹用）
 </center></p>
 <p><center>
-    <img src = ""
-    width=30%>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/%7BRE0Y%7DCHKB9JO%7B%7EO%7EESY8KT.png"
+    width=70%><br>完整草图（设计用）
+</center></p>
+</li>
+<li>
+<p>进行尺寸约束后，别忘了<strong>几何约束</strong>（圆弧与直线的相切等）</p>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/%60)VEJLJW99U%5B7Q_81%7EWREWP.png"
+    width=50%>
+    <br>图中标红的代表相切约束、镜像以及垂直约束
+</center></p>
+</li>
+<li>
+<p>选择<strong>拉伸凸台</strong>操作，拉出5mm。之后单击板面再次进行草图绘制，打出用于固定电机套的孔位。这里要用到的草图工具是<strong>圆周阵列</strong>（需要选择阵列对象、圆心以及阵列布置的数量与间隔）。注意留下的一个构造线的圆，后面要在这个地方切掉一块，给电机出线保留空间。这里的特征工具是<strong>拉伸切除</strong>功能（因为是通孔，暂且用不到异形孔向导）。</p>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/K953)K6%40WCO(Q_%7D7N%7D%25(5Q5.png"
+    width=50%>
+</center></p>
+</li>
+<li>
+<p>做镂空。形状可以自己调整，但是需要符合材料承力的原则。绘制完草图后选择拉伸切除，切掉这一部分面积。特征工具中找到圆角操作，让镂空的尖角变圆润。这可以有效降低<strong>应力集中</strong>。至此我们完成了镂空操作在评估工具选择测量，单击这个面，可以测得镂空后的面积。同样，拖动特征树下方的条回溯到镂空前的状态，可以测的镂空前的面积。计算一下我们减轻了百分之多少的质量。</p>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/WQT8N2E0XWT%7DM%7DR9A6NHB%5DF.png"
+    width=60%>
 </center></p>
 <p><center>
-    <img src = ""
-    width=30%>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/1QMCE%257A%5B%25%40JQU16%605J%7E8%5DI.png"
+    width=50%>
 </center></p>
+</li>
+<li>
+<p>切掉一小块，留出电机线的位置。之后再次使用圆角工具消除尖角。</p>
+</li>
+</ol>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>在设计时务必预留出电机电调、裁判系统等配件的出线位置，留够距离避免安装困难或者接插连接线困难。</p>
+</details>
 <p><center>
-    <img src = ""
-    width=30%>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/WDX%5B)%25O(5%60I2Q7W_%24((H69E.png"
+    width=50%>
 </center></p>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>圆角/倒角除了可以减少应力集中，在应力不大的外边缘处也可以降低人手被戳伤/划伤的风险。另外也会变得美观。</p>
+</details>
 <p><center>
-    <img src = ""
-    width=30%>
-</center></p>
-<p><center>
-    <img src = ""
-    width=30%>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/(X0%7E4CZ8SSRMC6%7BW2%409RF%7ED.png"
+    width=50%><br>大功告成
 </center></p>
 
 
