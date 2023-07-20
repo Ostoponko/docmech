@@ -61,7 +61,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red">
   
     
     
@@ -869,21 +869,54 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    简介
+    四足机器人
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="四足机器人">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     四足机器人的结构组成
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    四足腿部结构设计案例
+  </a>
+  
+    <nav class="md-nav" aria-label="四足腿部结构设计案例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mini-cheetah" class="md-nav__link">
+    Mini Cheetah
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spot" class="md-nav__link">
+    Spot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    应用场景
+  <a href="#_4" class="md-nav__link">
+    人形机器人
   </a>
   
 </li>
@@ -917,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../robots.md" class="md-nav__link">
+      <a href="../robots/" class="md-nav__link">
         1.2.5 其他有趣的机器人
       </a>
     </li>
@@ -1325,14 +1358,14 @@
       
       
         <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
-          4.2 机械结构拆装任务
+          4.2 机械结构拆装
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_1_2">
           <span class="md-nav__icon md-icon"></span>
-          4.2 机械结构拆装任务
+          4.2 机械结构拆装
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -4618,8 +4651,8 @@
 
 
 <h1 id="123">1.2.3 仿生足式机器人</h1>
-<h3 id="_1">简介</h3>
-<p>&emsp;&emsp;比起轮式机器人，足式机器人对非结构化地面环境有更好的适应能力，无论是四条腿的机器狗还是两条腿的仿人机器人，这种足式构型配合更加复杂的的算法，能够实现更广泛地形的运动能力。</p>
+<p>&emsp;&emsp;人类以及一些高等哺乳动物在大自然上亿年的洗礼中，进化出了腿足这种适应性极高的运动形式。比起轮式机器人，足式机器人对非结构化地面环境有更好的适应能力，无论是四条腿的机器狗还是两条腿的仿人机器人，这种足式构型配合多传感器以及更加复杂的控制算法，能够实现更广泛地形的运动能力。</p>
+<h2 id="_1">四足机器人</h2>
 <p><center>
     <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/boston-dynamics-spotmini.jpg"
     width=30%>
@@ -4637,12 +4670,40 @@
 <li>Unitree: <a href="https://www.unitree.com/">https://www.unitree.com/</a></li>
 </ul>
 </blockquote>
-<h2 id="_2">四足机器人的结构组成</h2>
+<h3 id="_2">四足机器人的结构组成</h3>
 <p><center>
     <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/readfile"
-    width= 65%">
+    width= 65%"><br>Anymal的结构组成
 </center></p>
-<h2 id="_3">应用场景</h2>
+<ul>
+<li>
+<p>驱动关节：Anymal的驱动单元Anydrive采用了SEA（串联弹性驱动器）的方案。一共12个包含电机本体、减速器、SEA弹性元件以及编码器一体驱动器集成的关节驱动模组。</p>
+</li>
+<li>
+<p>机身本体：碳纤维的机身、小腿以及铝合金大腿，承担机身载荷。</p>
+</li>
+<li>
+<p>感知单元：足端力传感器；深度相机/激光雷达。</p>
+</li>
+<li>
+<p>计算控制单元：机身内部的小型计算机。</p>
+</li>
+</ul>
+<h3 id="_3">四足腿部结构设计案例</h3>
+<h4 id="mini-cheetah">Mini Cheetah</h4>
+<h4 id="spot">Spot</h4>
+<h2 id="_4">人形机器人</h2>
+<p>&emsp;&emsp;人形机器人发展至今，想要完美代替人类完成工作还是比较困难的。工业机械臂从发展初期到成熟应用于工业界花了30年的时间，相比之下，复杂度远远更高的人形机器人想要走到成熟应用的一步，就需要花费更长的时间。</p>
+<p>&emsp;&emsp;相比四足机器人，人形机器人的关节驱动要求就要高得多。对机器人来说，尺寸越大，对关节驱动的要求就更高，实现同样的运动就更困难，这就是所谓的“尺寸效应”。机器人尺度扩大λ倍，质量就会扩大λ<sup>3</sup>倍，加上运动尺度本身的扩大，那么所需求的运动扭矩就是λ<sup>4</sup>量级的。然而就永磁体+线圈式的电机驱动器而言，尺度的扩大仅仅能够带来λ^2级别的扭矩输出。<strong>这样随着尺度的增大，驱动器的能力会越来越跟不上输出需求的能力。</strong> 这也就是为什么小型机器人往往可以获得更高的功率密度。</p>
+<blockquote>
+<p>可参考文章：<a href="https://zhuanlan.zhihu.com/p/58077049">MIT Mini Cheetah的驱动与结构原理解读以及对尺寸效应的思考</a></p>
+</blockquote>
+<p>&emsp;&emsp;因此相比最常见的电机驱动的方案，液压的方案可能更易于驱动大尺度的人形机器人关节。比如BD的Atlas，就是液压驱动的关节方案。另外也有一些人形机器人采取了液压-电机混合驱动方式。</p>
+<blockquote>
+<p>推荐阅读：
+<a href="https://www.zhihu.com/column/c_1051421942619357184">知乎专栏：腿足式机器人的机电系统实现，任赜宇</a></p>
+<p>（学习专业工程师的经验分享，对于机器人机电系统学习来说有很高的参考价值）</p>
+</blockquote>
 
 
 

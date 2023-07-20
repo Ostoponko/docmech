@@ -16,7 +16,7 @@
         <link rel="prev" href="../%E4%BB%BF%E7%94%9F%E6%9C%BA%E5%99%A8%E4%BA%BA/">
       
       
-        <link rel="next" href="../%E7%94%B5%E5%8A%A8%E8%9E%BA%E4%B8%9D%E5%88%80/">
+        <link rel="next" href="../robots/">
       
       <link rel="icon" href="../../pic/favicon1.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
@@ -61,7 +61,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red">
   
     
     
@@ -857,9 +857,54 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          1.2.4 轮足机器人
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         1.2.4 轮足机器人
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#handle" class="md-nav__link">
+    Handle机器人
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    平衡步兵
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    稚晖君的模态转换轮足
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -872,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../robots.md" class="md-nav__link">
+      <a href="../robots/" class="md-nav__link">
         1.2.5 其他有趣的机器人
       </a>
     </li>
@@ -1280,14 +1325,14 @@
       
       
         <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
-          4.2 机械结构拆装任务
+          4.2 机械结构拆装
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_1_2">
           <span class="md-nav__icon md-icon"></span>
-          4.2 机械结构拆装任务
+          4.2 机械结构拆装
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -4573,6 +4618,48 @@
 
 
 <h1 id="124">1.2.4 轮足机器人</h1>
+<p>&emsp;&emsp;轮式和足式的结合，在某种程度上可以同时实现轮式效率高、速度快的优点和足式对复杂地形适应性好的优点。这也许是我们学习完足式和轮式机器人之后头脑里自然萌生出的想法。不难想象，这种结合性的创造或许真的能够实现对传统仿生道路的超越。</p>
+<p><center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/image.imageformat.fullwidth.1974542474.jpg"
+    width=30%>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/20_07_15_tina_leg-1024x576.jpg"
+    width=36%>
+    <br>Anymal与Ascento
+</center></p>
+<blockquote>
+<p>在一个IEEE会议的Workshop中，看到有如下讨论结果：</p>
+<p><em>For disaster response scenarios, a combination of wheels and legs might be the best solution.</em></p>
+<p>对于灾难响应的场景，腿和足的结合也许是最好的方案。</p>
+<p>来源：<a href="https://www.iit.it/web/hrii/humanoids2018-workshop">https://www.iit.it/web/hrii/humanoids2018-workshop</a></p>
+</blockquote>
+<p>&emsp;&emsp;和四足机器人的腿类似，也有串联和并联构型，串联腿有更大的空间范围，但并联腿受力特性较优。串联构型由膝盖方向看也有正屈膝与反屈膝关节两类。关节驱动也有不同类型，如SEA或者QDD半直驱等。关于驱动方式我们以后在专题中进行详细讨论。</p>
+<h2 id="handle">Handle机器人</h2>
+<p>&emsp;&emsp;Handle是Boston Dynamics的另一个产品，也是面向工业物流搬运场景研发的。前一代Handle拥有上肢双臂的造型，采取双手夹取搬运货物。而二代Handle设计就简洁了很多，使用了工业物流界主流的机械臂和末端气动吸盘方案，同时设计了一个大尾巴挂在后端，尾巴关节可以提供
+<center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/boston-dynamics-handle-robot-shows-how-fun-stacking-boxes-can-be_4.jpg"
+    width=21%>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/Handle.jpg"
+    width=42%>
+    <br>发展前后的Handle机器人
+</center></p>
+<h2 id="_1">平衡步兵</h2>
+<p>&emsp;&emsp;我们的平衡步兵可以采取平衡车式的“小板凳”设计，也可以给它加上一双腿，成为轮腿平衡步兵。相比平衡车，轮腿步兵想要实现高速动态响应前提下同样的姿态稳定性，对控制算法的要求大大提高了，而且战场上遍地的小弹丸障碍物也会对轮腿的控制提出要求，对于水平实力一般的队伍来说，风险相较于四轮车仍然很高。不过对一些技术强队来说，依然能将轮腿做得非常优秀，丝毫不逊色四轮车。
+<center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/J0O6%240YGE%5BF%25ADT332YUNVX.png"
+    width=27%>&emsp;&emsp;
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/%7EE%60TSBZLU5%24%5D3IUC54KZDF5.png"
+    width=30%>
+    <br>RM平衡步兵（图片来源：RM官网资料站）
+</center></p>
+<h2 id="_2">稚晖君的模态转换轮足</h2>
+<p>&emsp;&emsp;区别在于，多了一个轮足模态转换的功能，让轮子反转变成真正的足。想法很新颖，结构设计也比较用心。至于切换是否具有实用性，性能收益是否更高，仍然需要后续测试过程中时间的检验。
+<center>
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/_%60J1TO30%7DB559%405ML%7EE0IVJ.png"
+    width=38%>&emsp;&emsp;
+    <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/U7V%60%401%7BCG022O4%7DKN%5DRUKKJ.png"
+    width=30%>
+    <br>稚晖君的轮足二相腿
+</center></p>
 
 
 
@@ -4610,13 +4697,13 @@
         
         
           
-          <a href="../%E7%94%B5%E5%8A%A8%E8%9E%BA%E4%B8%9D%E5%88%80/" class="md-footer__link md-footer__link--next" aria-label="Next: 1.3.1 电动螺丝刀" rel="next">
+          <a href="../robots/" class="md-footer__link md-footer__link--next" aria-label="Next: 1.2.5 其他有趣的机器人" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                1.3.1 电动螺丝刀
+                1.2.5 其他有趣的机器人
               </div>
             </div>
             <div class="md-footer__button md-icon">
