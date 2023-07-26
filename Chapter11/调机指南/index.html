@@ -4623,10 +4623,11 @@
 <li>
 <p>计算旋转距离为：rotation_distance = &lt;旧rotation_distance&gt; * &lt;实际挤出长度&gt; / &lt;请求的挤出长度&gt;。将新的 rotation_distance 取整到小数点后3位。</p>
 </li>
-<li>
-<p><strong>床网补偿</strong></p>
-</li>
 </ol>
+<hr />
+<ul>
+<li><strong>床网补偿</strong></li>
+</ul>
 <p>&emsp;&emsp;床网模块可以用于补偿床面的不规则性，以实现更好的<strong>首层均一性</strong>。简单来说，打印平面不是一个完美的平面，而是一个连续曲面。在每一个(X,Y)坐标下，Z轴高度总是相对平均高度有一个偏差值。通过弥补这个偏差值就能实现更好的首层均一性。采样的点是有限的，因此在采样后要做插值拟合获得整个平面的Z轴高度变化。需要注意的是，基于软件的校正无法达到完美的结果，它只能近似地模拟床面的形状。</p>
 <p><center>
     <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/almost-flat-beds-arent-a-myth-learn-how-to-get-matteo-parenti-via-all3dp-221222.jpg"
@@ -4639,6 +4640,7 @@
     width= 30%">
     <br>床网插值
 </center></p>
+<hr />
 <ul>
 <li><strong>共振补偿</strong></li>
 </ul>
@@ -4649,6 +4651,7 @@
     <br>振纹
 </center></p>
 <p>&emsp;&emsp;振纹是由打印机在快速改变打印方向时机械振动引起的。请注意，振纹通常源于机械方面的问题：打印机框架强度不足，皮带不够紧或太有弹性，机械部件的对准问题，移动质量大等。</p>
+<hr />
 <ul>
 <li><strong>压力提前</strong></li>
 </ul>
