@@ -1965,40 +1965,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          11.4 调机指南
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         11.4 调机指南
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    机器参数
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -4634,10 +4603,30 @@
 <p><em>本章节内容摘自Klipper固件文档。注：Pressure Advance（压力补偿）在中文文档中被错误翻译为“压力推进”</em>。</p>
 <p><em>参考：http://www.klipper3d.org/zh/</em></p>
 </blockquote>
-<h2 id="_1">机器参数</h2>
 <ul>
-<li><strong>床网补偿</strong></li>
+<li><strong>挤出校正</strong></li>
 </ul>
+<p>&emsp;&emsp;保障正确打印的第一步就是进行挤出校正，防止过度挤出或欠挤出。调试方法也比较简单，即以实际退回长度和输入退回长度进行比较，将比率系数乘到原先的klipper配置文件中的rotation_distance即可。详细步骤如下：</p>
+<ol>
+<li>
+<p>首先确保挤出机里有耗材，热端已被加热到适当的温度，并且打印机准备好挤出。</p>
+</li>
+<li>
+<p>用记号笔在离挤出机入口约70毫米的位置上对耗材做一个标记。然后用数字卡尺尽可能精确地测量该标记的实际距离。将此记为&lt;初始标记距离&gt;。</p>
+</li>
+<li>
+<p>用下面列出的命令挤出 50mm 的打印丝。先发送G91，然后发送 G1 E50 F60。注意50mm为&lt;请求的挤出长度&gt;。等待挤出机完成移动（大约需要50秒）。在这个测试中，使用缓慢的挤出速度是很重要的，因为较快的速度会导致挤出机的压力变高，使结果发生偏差。(不要在这个测试中使用图形前端的"挤出按钮"，因为它是以快速的速度挤出的。)</p>
+</li>
+<li>
+<p>使用数显卡尺测量挤出机主体与耗材上的标记之间的新距离。请注意该距离是 &lt;最终标记距离&gt;。然后计算：实际挤出长度 = &lt;初始标记距离&gt; - &lt;最终标记距离&gt;</p>
+</li>
+<li>
+<p>计算旋转距离为：rotation_distance = &lt;旧rotation_distance&gt; * &lt;实际挤出长度&gt; / &lt;请求的挤出长度&gt;。将新的 rotation_distance 取整到小数点后3位。</p>
+</li>
+<li>
+<p><strong>床网补偿</strong></p>
+</li>
+</ol>
 <p>&emsp;&emsp;床网模块可以用于补偿床面的不规则性，以实现更好的<strong>首层均一性</strong>。简单来说，打印平面不是一个完美的平面，而是一个连续曲面。在每一个(X,Y)坐标下，Z轴高度总是相对平均高度有一个偏差值。通过弥补这个偏差值就能实现更好的首层均一性。采样的点是有限的，因此在采样后要做插值拟合获得整个平面的Z轴高度变化。需要注意的是，基于软件的校正无法达到完美的结果，它只能近似地模拟床面的形状。</p>
 <p><center>
     <img src = "https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/almost-flat-beds-arent-a-myth-learn-how-to-get-matteo-parenti-via-all3dp-221222.jpg"

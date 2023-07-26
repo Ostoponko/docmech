@@ -1951,9 +1951,142 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          11.3 打印常见问题与解决方案
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         11.3 打印常见问题与解决方案
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    打印机故障
+  </a>
+  
+    <nav class="md-nav" aria-label="打印机故障">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clogged-extruder" class="md-nav__link">
+    喷头堵塞（Clogged Extruder）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stops-extruding" class="md-nav__link">
+    挤出中止（Stops Extruding）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    打印失败
+  </a>
+  
+    <nav class="md-nav" aria-label="打印失败">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#not-sticking-to-the-bed" class="md-nav__link">
+    首层脱离热床（Not Sticking to the Bed）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer-shifting" class="md-nav__link">
+    层移（Layer Shifting）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer-separation-and-splitting" class="md-nav__link">
+    层间开裂（Layer Separation and Splitting）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warping" class="md-nav__link">
+    底部翘曲/翘边（Warping）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    打印质量问题
+  </a>
+  
+    <nav class="md-nav" aria-label="打印质量问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elephants-foot" class="md-nav__link">
+    象脚（Elephant's foot）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stringing-or-oozing" class="md-nav__link">
+    拉丝（Stringing or Oozing）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blobs-and-zits" class="md-nav__link">
+    表面斑点和痘痘（Blobs and Zits）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#under-extruding" class="md-nav__link">
+    欠挤出（Under-extruding）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4599,6 +4732,101 @@
 
 
 <h1 id="113">11.3 打印常见问题与解决方案</h1>
+<p>&emsp;&emsp;FDM打印可能会出现一些打印失败或者质量不够高的问题。下面仅列举几个常见的打印问题，更多问题可以去一些打印指南文档网站查找有无对应解决方法。</p>
+<blockquote>
+<p>详细参考（3D打印质量故障排除指南）：</p>
+<ol>
+<li>
+<p><a href="https://www.simplify3d.com/resources/print-quality-troubleshooting/">Print Quality Troubleshooting Guide</a></p>
+</li>
+<li>
+<p><a href="https://bitfab.io/blog/3d-printing-problems/">The definitive guide to solving 3D printing problems by Bitfab</a></p>
+</li>
+<li>
+<p><a href="https://www.3dsourced.com/rigid-ink/ultimate-3d-printing-troubleshooting-guide/">44 Common 3D Print Problems – Troubleshooting Issues 2023</a></p>
+</li>
+</ol>
+</blockquote>
+<hr />
+<h2 id="_1">打印机故障</h2>
+<h3 id="clogged-extruder">喷头堵塞（Clogged Extruder）</h3>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/clogged-extruder-1024x1024-1-1024x1024.jpg"
+width="20%">
+<br>喷头堵塞
+</center></p>
+<p>&emsp;&emsp;大概率是喷嘴堵塞，而非前置区域（喉管）堵塞。检查是否是挤出力不足，在温度保持在打印温度区间时，用手轻推耗材丝。如果发现挤出仍然困难，用套筒扳手卸下喷嘴，再尝试轻推挤出。一般来说，喷嘴堵塞可以用丁烷火焰喷枪烧至耗材丝碳化解决。如果是喉管堵塞，疏通失败，可以考虑换一个喷头了。</p>
+<h3 id="stops-extruding">挤出中止（Stops Extruding）</h3>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/stops-extruding-mid-print-1024x1024-1-1024x1024.jpg"
+width="20%">
+<br>挤出中止
+</center></p>
+<p>&emsp;&emsp;检查挤出机是否卡好，挤出齿轮是否紧压耗材丝。另一种可能性是挤出齿轮对耗材丝压力过大，将其磨断。如果不是挤出机问题，检查是否发生上面的喷头堵塞问题。</p>
+<hr />
+<h2 id="_2">打印失败</h2>
+<h3 id="not-sticking-to-the-bed">首层脱离热床（Not Sticking to the Bed）</h3>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/print-not-sticking-to-bed-1024x1024.jpg"
+width="20%">
+<br>首层脱离热床
+</center></p>
+<p>&emsp;&emsp;这也就意味着首层在平台上的附着力不够。大概率是调平不当导致的喷嘴与平台距离过大。其次有可能是因为首层打印速度过快，导致塑料还没来得及进行粘合附着就被冷却。可以尝试禁用打印机前几层的冷却风扇，以便初始层不会冷却得太快。</p>
+<p>&emsp;&emsp;如果因为热床平台本身较脏，尝试用酒精擦拭平台表面，并使用固体胶，均匀涂在将要打印的位置，帮助粘合。</p>
+<h3 id="layer-shifting">层移（Layer Shifting）</h3>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/layer-shifting-1024x1024-1-1024x1024.jpg"
+width="20%">
+<br>层移
+</center></p>
+<p>&emsp;&emsp;可能是驱动热端移动的步进电机发生了丢步（因为撞击模型层上的凸出等原因）。打印速度过高时，步进电机可承受度扭矩较低，更容易发生丢步。因为大部分情况步进电机是开环控制的，外力使之丢步，系统无法补偿丢失的距离，所以会发生层移。</p>
+<p>&emsp;&emsp;另外有可能是皮带过松导致的滑齿，皮带轮在旋转，但皮带没有移动；又或者是电机和皮带轮的连轴发生打滑，电机轴旋转而皮带轮不在旋转。这都有可能导致层移。</p>
+<p>&emsp;&emsp;建议检查上述传动失效以及尝试降低打印速度。电气仓过热可能导致电机驱动发生故障，引起步进电机工作异常，不过概率较低。</p>
+<h3 id="layer-separation-and-splitting">层间开裂（Layer Separation and Splitting）</h3>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/layers-splitting-or-cracking-1024x1024-1-1024x1024.jpg"
+width="20%">
+<br>层间开裂
+</center></p>
+<p>&emsp;&emsp;通常是因为打印温度太低导致的，高温更容易促进层间粘合。另外检查层高是否过大，过大的层高也会导致层间不容易粘合。</p>
+<h3 id="warping">底部翘曲/翘边（Warping）</h3>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/warping-1024x1024-1-1024x1024.jpg"
+width="20%">
+<br>底部翘曲
+</center></p>
+<p>&emsp;&emsp;翘边是非常常见的打印问题，在高温打印ABS时尤为常见，塑料冷却收缩产生的应力会逐渐将模型拉离热床平台。尽量保证仓温较高且热床温度较高，适当延缓底层的冷却收缩。另外可以禁用前几层的冷却风扇。另外，最好添加裙边（Skirt），或者用固体胶涂在打印平台上防止翘边</p>
+<hr />
+<h2 id="_3">打印质量问题</h2>
+<p>&emsp;&emsp;使用质量较好的打印机，并确保调平等准备工作，通常来说不会发生直接翻车的情况，但是也会出现一些打印质量较低的问题，需要进一步调试。以下是常见的几种问题。</p>
+<h3 id="elephants-foot">象脚（Elephant's foot）</h3>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/Rigid_Ink_23.02.17_29464_heat_creep_c2cb9c66-7f5e-4883-b67f-e8b136678684_x150.png"
+width="22%">
+<br>象脚
+</center></p>
+<p>&emsp;&emsp;大概率是因为喷嘴距离热床太近，导致第一层被挤扁了。另外检查热床温度是否过高。过高的床温会导致塑料膨胀和变形。检查z轴高度是否影响太多，如果不影响可以用倒角刀去除象脚。</p>
+<h3 id="stringing-or-oozing">拉丝（Stringing or Oozing）</h3>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/hairs-and-stringing-1024x1024-1-1024x1024.jpg"
+width="20%">
+<br>拉丝渗料
+</center></p>
+<p>&emsp;&emsp;回抽距离/速度不足导致的喷头移动过程中仍然在渗料。同时可以尝试降低打印温度，减少耗材的流动性。</p>
+<h3 id="blobs-and-zits">表面斑点和痘痘（Blobs and Zits）</h3>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/blobs-and-zits-1024x1024-1-1024x1024.jpg"
+width="20%">
+<br>表面斑点
+</center></p>
+<p>&emsp;&emsp;检擦回抽设置，避免不必要的回抽以及回抽过大。另外可以查看挤出量是否正确，如果不正确可以校正挤出。如果是在转角处棱角凸出，可以设置压力提前（参照<a href="../%E8%B0%83%E6%9C%BA%E6%8C%87%E5%8D%97/">11.4节调机指南</a>）。</p>
+<h3 id="under-extruding">欠挤出（Under-extruding）</h3>
+<p><center>
+<img src="https://raw.githubusercontent.com/Ostoponko/Picstorage/master/img/under-extruding-1024x1024.jpg"
+width="20%">
+<br>欠挤出
+</center></p>
+<p>详情参考<a href="../%E8%B0%83%E6%9C%BA%E6%8C%87%E5%8D%97/">11.4节</a>的挤出校正。</p>
 
 
 
