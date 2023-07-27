@@ -131,11 +131,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ostoponko.github.io/docmech/Chapter17/%E6%B0%94%E5%8A%A8%E5%9F%BA%E7%A1%80/</loc>
-         <lastmod>2023-07-27</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://ostoponko.github.io/docmech/Chapter17/%E6%BB%9A%E5%8A%A8%E8%BD%B4%E6%89%BF1/</loc>
          <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
@@ -212,6 +207,16 @@
     </url>
     <url>
          <loc>https://ostoponko.github.io/docmech/Chapter2/%E8%BD%AE%E8%B6%B3%E6%9C%BA%E5%99%A8%E4%BA%BA/</loc>
+         <lastmod>2023-07-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ostoponko.github.io/docmech/Chapter21/%E5%85%83%E4%BB%B6%EF%BC%9A%E7%94%B5%E7%A3%81%E9%98%80/</loc>
+         <lastmod>2023-07-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ostoponko.github.io/docmech/Chapter21/%E6%B0%94%E5%8A%A8%E5%9F%BA%E7%A1%80/</loc>
          <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
